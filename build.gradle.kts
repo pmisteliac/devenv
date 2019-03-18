@@ -12,6 +12,8 @@ devenv {
 
   // Libraries and applications.
   registerRepo("pie")
+  registerRepo("spoofax")
+  registerRepo("spoofax-pie")
 
   // Continuous integration.
   registerRepo("jenkins.pipeline")
