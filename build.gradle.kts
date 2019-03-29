@@ -1,5 +1,5 @@
 plugins {
-  id("org.metaborg.gradle.config.devenv") version "0.3.5"
+  id("org.metaborg.gradle.config.devenv") version "0.3.7"
 }
 
 devenv {
@@ -11,6 +11,7 @@ devenv {
   registerRepo("spoofax.gradle")
 
   // Libraries and applications.
+  registerRepo("log")
   registerRepo("pie")
   registerRepo("spoofax")
   registerRepo("spoofax-pie")
@@ -29,7 +30,7 @@ devenv {
 
 tasks {
   wrapper {
-    gradleVersion = "5.2"
+    gradleVersion = "5.3"
     distributionType = Wrapper.DistributionType.ALL
     setJarFile(".gradlew/wrapper/gradle-wrapper.jar")
   }
