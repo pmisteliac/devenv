@@ -12,6 +12,7 @@ devenv {
 
   // Libraries and applications.
   registerRepo("log")
+  registerRepo("resource")
   registerRepo("pie")
   registerRepo("spoofax")
   registerRepo("spoofax-pie")
