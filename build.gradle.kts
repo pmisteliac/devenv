@@ -8,6 +8,7 @@ devenv {
   // Gradle plugins.
   registerRepo("gradle.config")
   registerRepo("gitonium")
+  registerRepo("coronium")
   registerRepo("spoofax.gradle")
 
   // Libraries and applications.
