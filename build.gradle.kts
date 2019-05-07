@@ -11,11 +11,14 @@ devenv {
   registerRepo("coronium")
   registerRepo("spoofax.gradle")
 
+  // Spoofax Core libraries and applications.
+  registerRepo("spoofax")
+  registerRepo("sdf")
+  
   // Libraries and applications.
   registerRepo("log")
   registerRepo("resource")
   registerRepo("pie")
-  registerRepo("spoofax")
   registerRepo("spoofax-pie")
 
   // Continuous integration.
