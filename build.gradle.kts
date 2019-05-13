@@ -12,8 +12,9 @@ devenv {
   registerRepo("spoofax.gradle")
 
   // Spoofax Core libraries and applications.
-  registerRepo("spoofax")
+  registerRepo("mb-exec")
   registerRepo("sdf")
+  registerRepo("spoofax")
   
   // Libraries and applications.
   registerRepo("log")
