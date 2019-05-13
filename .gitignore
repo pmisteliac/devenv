@@ -5,20 +5,22 @@
 # Unignore gradle wrapper subdirectory.
 !/.gradlew
 
+# Java
+*.class
+*.jar
+hs_err_pid*
+
 # Gradle
-/.gradle
+**/.gradle
 /build
 
 # IntelliJ
-/.idea
-/out
+**/.idea
+**/out
 
 # Eclipse
-/.project
-/.settings
-/.classpath
-/.factorypath
-/bin
-
-# Java
-*.hprof
+**/.project
+**/.settings
+**/.classpath
+**/.factorypath
+**/bin
