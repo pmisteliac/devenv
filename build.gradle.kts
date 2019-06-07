@@ -1,5 +1,5 @@
 plugins {
-  id("org.metaborg.gradle.config.devenv") version "0.3.7"
+  id("org.metaborg.gradle.config.devenv") version "0.3.8"
 }
 
 devenv {
@@ -13,9 +13,9 @@ devenv {
 
   // Spoofax Core libraries and applications.
   registerRepo("mb-exec")
-  registerRepo("sdf")
   registerRepo("spoofax")
-  
+  registerRepo("sdf")
+
   // Libraries and applications.
   registerRepo("log")
   registerRepo("resource")
