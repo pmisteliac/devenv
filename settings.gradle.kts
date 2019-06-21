@@ -28,10 +28,3 @@ pluginManagement {
 configure<DevenvSettingsExtension> {
   includeBuildsFromSubDirs(true)
 }
-
-// HACK: emulate nested included builds, as IntelliJ does not support nested composite builds yet.
-if(the<DevenvSettingsExtension>().repoProperties["spoofax.gradle"]?.include == true) {
-  if(File(rootDir, "spoofax.gradle/example/calc").exists()) {
-    includeBuild("spoofax.gradle/example/calc")
-  }
-}
