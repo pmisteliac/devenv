@@ -42,6 +42,7 @@ to get an overview of which tasks can be executed. Interesting tasks will be in 
 ## Importing into IntelliJ IDEA
 
 Import the project as a Gradle project. See [Importing a project from a Gradle model](https://www.jetbrains.com/help/idea/gradle.html#gradle_import).
+In the wizard, at _Group modules_, choose: _Using explicit module groups_, and use a local installation of Gradle 5.4.1 or newer.
 
 When new repositories are cloned, refresh all Gradle projects. See [Refreshing a linked Gradle project](https://www.jetbrains.com/help/idea/gradle.html#gradle_refresh_project).
 
