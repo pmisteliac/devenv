@@ -13,7 +13,7 @@ Gradle does not need to be installed, as this repository includes a Gradle wrapp
 To update repositories to their latest version, and to clone new repositories, run:
 
 ```bash
-gradlew updateRepos
+gradlew repoUpdate
 ```
 
 On Windows, use `gradlew.bat` instead.
@@ -66,7 +66,7 @@ By default, no repositories will be cloned or updated, they must be explicitly i
 List all available repositories and their properties with:
 
 ```
-gradlew listRepos
+gradlew repoList
 ```
 
 Each repository has the following properties:
