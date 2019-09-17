@@ -15,6 +15,7 @@ devenv {
   registerRepo("mb-exec")
   registerRepo("spoofax")
   registerRepo("sdf")
+  registerRepo("jsglr")
 
   // Libraries and applications.
   registerRepo("log")
