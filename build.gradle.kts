@@ -37,7 +37,7 @@ devenv {
 
 tasks {
   wrapper {
-    gradleVersion = "5.3"
+    gradleVersion = "5.6.2"
     distributionType = Wrapper.DistributionType.ALL
     setJarFile(".gradlew/wrapper/gradle-wrapper.jar")
   }
