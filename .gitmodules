@@ -1,0 +1,40 @@
+[submodule "spoofax.pie"]
+	path = spoofax.pie
+	url = ./spoofax.pie/
+	branch = develop
+[submodule "log"]
+	path = log
+	url = ./log
+	branch = develop
+[submodule "resource"]
+	path = resource
+	url = ./resource
+	branch = develop
+[submodule "pie"]
+	path = pie
+	url = ./pie
+	branch = develop
+[submodule "jsglr"]
+	path = jsglr
+	url = ./jsglr
+	branch = master
+[submodule "sdf"]
+	path = sdf
+	url = ./sdf
+	branch = master
+[submodule "jenkins.pipeline"]
+	path = jenkins.pipeline
+	url = ./jenkins.pipeline/
+	branch = develop
+[submodule "mb.exec"]
+	path = mb.exec
+	url = ./mb.exec/
+	branch = master
+[submodule "spoofax"]
+	path = spoofax
+	url = ./spoofax
+	branch = master
+[submodule "spoofax.gradle"]
+	path = spoofax.gradle
+	url = ./spoofax.gradle
+	branch = develop
