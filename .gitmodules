@@ -1,40 +1,40 @@
 [submodule "spoofax.pie"]
 	path = spoofax.pie
-	url = ./spoofax.pie/
+	url = git@github.com:metaborg/spoofax-pie.git
 	branch = develop
 [submodule "log"]
 	path = log
-	url = ./log
+	url = git@github.com:metaborg/log.git
 	branch = develop
 [submodule "resource"]
 	path = resource
-	url = ./resource
+	url = git@github.com:metaborg/resource.git
 	branch = develop
 [submodule "pie"]
 	path = pie
-	url = ./pie
+	url = git@github.com:metaborg/pie.git
 	branch = develop
 [submodule "jsglr"]
 	path = jsglr
-	url = ./jsglr
+	url = git@github.com:metaborg/jsglr.git
 	branch = master
 [submodule "sdf"]
 	path = sdf
-	url = ./sdf
+	url = git@github.com:metaborg/sdf.git
 	branch = master
 [submodule "jenkins.pipeline"]
 	path = jenkins.pipeline
-	url = ./jenkins.pipeline/
+	url = git@github.com:metaborg/jenkins.pipeline.git
 	branch = develop
 [submodule "mb.exec"]
 	path = mb.exec
-	url = ./mb.exec/
+	url = git@github.com:metaborg/mb-exec.git
 	branch = master
 [submodule "spoofax"]
 	path = spoofax
-	url = ./spoofax
+	url = git@github.com:metaborg/spoofax.git
 	branch = master
 [submodule "spoofax.gradle"]
 	path = spoofax.gradle
-	url = ./spoofax.gradle
+	url = git@github.com:metaborg/spoofax.gradle.git
 	branch = develop
