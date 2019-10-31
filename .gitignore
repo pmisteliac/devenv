@@ -19,3 +19,6 @@
 /.classpath
 /.factorypath
 /bin
+
+# Sublime Text
+/**.sublime-workspace
