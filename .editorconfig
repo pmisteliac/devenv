@@ -48,6 +48,8 @@ ij_java_space_before_while_parentheses = false
 ij_java_space_within_empty_method_call_parentheses = false
 ij_java_space_within_empty_method_parentheses = false
 ij_java_spaces_within_annotation_parentheses = false
+# No space after cast.
+ij_java_space_after_type_cast = false
 
 [*.json]
 indent_size = 2
