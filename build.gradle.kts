@@ -1,5 +1,5 @@
 plugins {
-  id("org.metaborg.gradle.config.devenv") version "0.3.8"
+  id("org.metaborg.gradle.config.devenv") version "0.3.9"
 }
 
 devenv {
