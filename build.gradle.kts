@@ -1,5 +1,5 @@
 plugins {
-  id("org.metaborg.gradle.config.devenv") version "0.3.9"
+  id("org.metaborg.gradle.config.devenv") version "0.3.10"
 }
 
 devenv {
@@ -33,12 +33,4 @@ devenv {
   registerCompositeBuildTask("assembleAll", "Assembles the outputs for all projects in the composite build.")
   registerCompositeBuildTask("buildAll", "Assembles and tests all projects in the composite build.")
   registerCompositeBuildTask("publishAll", "Publishes all publications produced by all projects in the composite build.")
-}
-
-tasks {
-  wrapper {
-    gradleVersion = "5.6.2"
-    distributionType = Wrapper.DistributionType.ALL
-    setJarFile(".gradlew/wrapper/gradle-wrapper.jar")
-  }
 }

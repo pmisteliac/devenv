@@ -19,7 +19,7 @@ buildscript {
     gradlePluginPortal()
   }
   dependencies {
-    classpath("org.metaborg:gradle.config:0.3.8")
+    classpath("org.metaborg:gradle.config:0.3.10")
   }
 }
 apply(plugin = "org.metaborg.gradle.config.devenv-settings")
