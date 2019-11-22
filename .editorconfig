@@ -75,3 +75,8 @@ ij_continuation_indent_size = 2
 indent_size = 2
 tab_width = 2
 ij_continuation_indent_size = 2
+
+[{*.md, *.adoc}]
+indent_size = 2
+tab_width = 2
+ij_continuation_indent_size = 2
