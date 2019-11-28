@@ -56,7 +56,7 @@ indent_size = 2
 tab_width = 2
 ij_continuation_indent_size = 2
 
-[{*.gant, *.groovy, *.gradle, *.gdsl, *.gy}]
+[{*.gant, *.groovy, *.gradle, *.gdsl, *.gy, Jenkinsfile}]
 indent_size = 2
 tab_width = 2
 ij_continuation_indent_size = 2

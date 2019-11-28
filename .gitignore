@@ -1,3 +1,12 @@
+# macOS
+*.DS_Store
+
+# Java
+*.class
+*.jar
+hs_err_pid*
+
+# devenv
 # Ignore all subdirectories, because they are nested Git repositories.
 /*/
 # Unignore files in subdirectories, so that they do not show up as ignored in IntelliJ. Git will not track files in nested Git repositories.
@@ -8,6 +17,7 @@
 # Gradle
 /.gradle
 /build
+!.gradlew/wrapper/gradle-wrapper.jar
 
 # IntelliJ
 /.idea
