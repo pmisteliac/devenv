@@ -12,7 +12,7 @@ Gradle does not need to be installed, as this repository includes a Gradle wrapp
 
 To update repositories to their latest version, and to clone new repositories, run:
 
-```bash
+```shell script
 gradlew repoUpdate
 ```
 
@@ -22,7 +22,7 @@ On Windows, use `gradlew.bat` instead.
 
 To build all projects in all repositories, run:
 
-```bash
+```shell script
 gradlew buildAll
 ```
 
@@ -30,24 +30,27 @@ gradlew buildAll
 
 Gradle can execute tasks besides just building. Run:
 
-```
+```shell script
 gradlew tasks
 ```
 to get an overview of which tasks can be executed. Interesting tasks will be in these categories:
 
-* 'Composite build tasks': tasks that will be executed on every project, such as:
+* 'Composite build tasks': tasks that will be executed on every project, such as `buildAll`.
 * 'Application tasks': tasks that will build and run applications.
-* 'Devenv tasks': tasks for managing this development environment, such as:
+* 'Devenv tasks': tasks for managing this development environment, such as `repoStatus`.
 
 ## Importing into IntelliJ IDEA
 
-Import the project as a Gradle project. See [Importing a project from a Gradle model](https://www.jetbrains.com/help/idea/gradle.html#gradle_import).
-In the wizard, at _Group modules_, choose: _Using explicit module groups_, and use a local installation of Gradle 5.4.1 or newer.
+Import the project as a Gradle project. See [Opening an existing Gradle project](https://www.jetbrains.com/help/idea/gradle.html#gradle_import_project_start).
+In the wizard, choose `Use Gradle from`: `'wrapper' task in Gradle build script`, or choose a local Gradle installation (version 5.6.4) with `Specified location`.
 
-When new repositories are cloned, refresh all Gradle projects. See [Refreshing a linked Gradle project](https://www.jetbrains.com/help/idea/gradle.html#gradle_refresh_project).
+When new repositories are cloned, [Re-import a linked Gradle project﻿](https://www.jetbrains.com/help/idea/work-with-gradle-projects.html#gradle_refresh_project).
 
-To run Gradle tasks inside IntelliJ, see [Working with Gradle tasks](https://www.jetbrains.com/help/idea/gradle.html#gradle_tasks).
-Gradle tasks can be executed in Debug mode, which also enables debugging of any VMs that Gradle starts, such as those for running an application or testing, enabling debugging of applications and tests.
+To run Gradle tasks inside IntelliJ, see [Run Gradle tasks](https://www.jetbrains.com/help/idea/work-with-gradle-tasks.html#gradle_tasks).
+Similarly, for testing, see [Testing in Gradle](https://www.jetbrains.com/help/idea/work-with-tests-in-gradle.html).
+Gradle tasks and tests can be executed in Debug mode, which also enables debugging of any VMs that Gradle starts, such as those for running an application or testing, enabling debugging of applications and tests.
+
+If files in a repository are marked as ignored, add that repository as a version control root. See [Associate a directory with a version control system﻿](https://www.jetbrains.com/help/idea/enabling-version-control.html#associate_directory_with_VCS) for more info.
 
 ## Importing into Eclipse
 
@@ -65,7 +68,7 @@ Running tasks of a composite build in Eclipse is currently not supported.
 By default, no repositories will be cloned or updated, they must be explicitly included.
 List all available repositories and their properties with:
 
-```
+```shell script
 gradlew repoList
 ```
 
