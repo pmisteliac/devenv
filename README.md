@@ -5,8 +5,20 @@ The script supports cloning and updating Git repositories that contain the sourc
 
 ## Requirements
 
-To run Gradle, a Java Development Kit (JDK) of version 8 or higher is needed.
+### JDK 8
+
+To run Gradle and build this repository, a Java Development Kit (JDK) of version 8 is needed.
+Higher versions of the JDK (9+) are currently not supported, as not all our Java code is compatible with Java 9+ yet.
+
+We recommend to [install JDK8 from AdoptOpenJDK](https://adoptopenjdk.net/), or your favourite package manager (e.g., `brew install adoptopenjdk8` on macOS).
+
+### Gradle
+
 Gradle does not need to be installed, as this repository includes a Gradle wrapper script which automatically downloads Gradle.
+
+If you do not want to use the Gradle wrapper, Gradle version 5.6.4 (exactly) is needed.
+Gradle 6 is currently not supported, as not all our plugins are compatible with it yet.
+We recommend to install Gradle 5.6.4 using the [SDKMAN!](https://sdkman.io/) package manager with `sdk install gradle 5.6.4`.
 
 ## Updating repositories
 
@@ -42,7 +54,7 @@ to get an overview of which tasks can be executed. Interesting tasks will be in 
 ## Importing into IntelliJ IDEA
 
 Import the project as a Gradle project. See [Opening an existing Gradle project](https://www.jetbrains.com/help/idea/gradle.html#gradle_import_project_start).
-In the wizard, choose `Use Gradle from`: `'wrapper' task in Gradle build script`, or choose a local Gradle installation (version 5.6.4) with `Specified location`.
+In the wizard, choose `Use Gradle from`: `'wrapper' task in Gradle build script`.
 
 When new repositories are cloned, [Re-import a linked Gradle project﻿](https://www.jetbrains.com/help/idea/work-with-gradle-projects.html#gradle_refresh_project).
 
@@ -52,12 +64,15 @@ Gradle tasks and tests can be executed in Debug mode, which also enables debuggi
 
 If files in a repository are marked as ignored, add that repository as a version control root. See [Associate a directory with a version control system﻿](https://www.jetbrains.com/help/idea/enabling-version-control.html#associate_directory_with_VCS) for more info.
 
+If you do not want to use the wrapper, when importing the Gradle project, choose a local Gradle installation with `Specified location` (e.g., `/Users/gohla/.sdkman/candidates/gradle/5.6.4`).
+
 ## Importing into Eclipse
 
 Eclipse supports Gradle through the [buildship](https://projects.eclipse.org/projects/tools.buildship) plugin, which should be installed into Eclipse by default.
 However, using Eclipse is discouraged, as IntelliJ has much better support for Gradle.
 
 Import the project as an existing Gradle project. See [Import an existing Gradle project](http://www.vogella.com/tutorials/EclipseGradle/article.html#import-an-existing-gradle-project).
+On the `Import Options` page, select `Specific Gradle version` and choose `5.6.4.
 
 When new repositories are cloned, refresh the `devenv` Gradle project. See [Refresh Gradle Project](http://www.vogella.com/tutorials/EclipseGradle/article.html#updating-classpath-with-the-latest-changes-in-the-build-file).
 
