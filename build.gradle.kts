@@ -1,5 +1,6 @@
 plugins {
-  id("org.metaborg.gradle.config.devenv") version "0.3.12"
+  id("org.metaborg.gradle.config.devenv") version "0.3.13"
+  id("org.metaborg.gradle.config.root-project") version "0.3.13"
 }
 
 devenv {
@@ -25,20 +26,4 @@ devenv {
 
   // Continuous integration.
   registerRepo("jenkins.pipeline")
-}
-
-devenv {
-  registerCompositeBuildTask("cleanAll", "Deletes the build directory for all projects in the composite build.")
-  registerCompositeBuildTask("checkAll", "Runs all checks for all projects in the composite build.")
-  registerCompositeBuildTask("assembleAll", "Assembles the outputs for all projects in the composite build.")
-  registerCompositeBuildTask("buildAll", "Assembles and tests all projects in the composite build.")
-  registerCompositeBuildTask("publishAll", "Publishes all publications produced by all projects in the composite build.")
-}
-
-tasks {
-  register("buildSpoofaxExampleTiger") {
-    group = "development"
-    description = "Build all projects in spoofax.example.tiger composite build"
-    dependsOn(gradle.includedBuild("spoofax.example.tiger").task(":buildAll"))
-  }
 }
