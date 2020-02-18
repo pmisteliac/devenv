@@ -25,7 +25,7 @@ We recommend to install Gradle 5.6.4 using the [SDKMAN!](https://sdkman.io/) pac
 To update repositories to their latest version, and to clone new repositories, run:
 
 ```shell script
-gradlew repoUpdate
+./gradlew repoUpdate
 ```
 
 On Windows, use `gradlew.bat` instead.
@@ -35,7 +35,7 @@ On Windows, use `gradlew.bat` instead.
 To build all projects in all repositories, run:
 
 ```shell script
-gradlew buildAll
+./gradlew buildAll
 ```
 
 ## Gradle tasks
@@ -43,7 +43,7 @@ gradlew buildAll
 Gradle can execute tasks besides just building. Run:
 
 ```shell script
-gradlew tasks
+./gradlew tasks
 ```
 to get an overview of which tasks can be executed. Interesting tasks will be in these categories:
 
@@ -135,3 +135,6 @@ We include all subdirectories (which are usually repositories) in the composite 
 
 The repository update functionality comes from the `org.metaborg.gradle.config.devenv` plugin which is applied at the top of `build.gradle.kts`.
 This plugin exposes the `devenv` extension which allows configuration of repositories.
+
+## Troubleshooting
+In general, ensure you're calling `./gradlew` on Linux and MacOS (or `gradlew.bat` on Windows) instead of your local Gradle installation. The local one is most likely too new.
