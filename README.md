@@ -51,12 +51,14 @@ to get an overview of which tasks can be executed. Interesting tasks will be in 
 * 'Application tasks': tasks that will build and run applications.
 * 'Devenv tasks': tasks for managing this development environment, such as `repoStatus`.
 
+
 ## Importing into IntelliJ IDEA
+[Import the project as a Gradle project](https://www.jetbrains.com/help/idea/gradle.html#gradle_import_project_start).
+In the wizard, choose _Use Gradle from_: _'wrapper' task in Gradle build script_, and ensure _Build and run using_ and _Run tests using_ are both set to _Gradle (default)_.
 
-Import the project as a Gradle project. See [Opening an existing Gradle project](https://www.jetbrains.com/help/idea/gradle.html#gradle_import_project_start).
-In the wizard, choose `Use Gradle from`: `'wrapper' task in Gradle build script`.
+> **Note**: If you do not want or can't use the wrapper, instead choose a local Gradle installation with `Specified location` (e.g., `/Users/gohla/.sdkman/candidates/gradle/5.6.4`).
 
-When new repositories are cloned, [Re-import a linked Gradle project﻿](https://www.jetbrains.com/help/idea/work-with-gradle-projects.html#gradle_refresh_project).
+When new repositories are cloned, [re-import a linked Gradle project﻿](https://www.jetbrains.com/help/idea/work-with-gradle-projects.html#gradle_refresh_project).
 
 To run Gradle tasks inside IntelliJ, see [Run Gradle tasks](https://www.jetbrains.com/help/idea/work-with-gradle-tasks.html#gradle_tasks).
 Similarly, for testing, see [Testing in Gradle](https://www.jetbrains.com/help/idea/work-with-tests-in-gradle.html).
@@ -64,7 +66,6 @@ Gradle tasks and tests can be executed in Debug mode, which also enables debuggi
 
 If files in a repository are marked as ignored, add that repository as a version control root. See [Associate a directory with a version control system﻿](https://www.jetbrains.com/help/idea/enabling-version-control.html#associate_directory_with_VCS) for more info.
 
-If you do not want to use the wrapper, when importing the Gradle project, choose a local Gradle installation with `Specified location` (e.g., `/Users/gohla/.sdkman/candidates/gradle/5.6.4`).
 
 ## Importing into Eclipse
 
