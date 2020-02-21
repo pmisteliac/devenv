@@ -50,6 +50,7 @@ ij_java_space_within_empty_method_parentheses = false
 ij_java_spaces_within_annotation_parentheses = false
 # No space after cast.
 ij_java_space_after_type_cast = false
+ij_java_doc_do_not_wrap_if_one_line = true
 
 [*.json]
 indent_size = 2
