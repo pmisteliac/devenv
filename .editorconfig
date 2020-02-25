@@ -50,7 +50,11 @@ ij_java_space_within_empty_method_parentheses = false
 ij_java_spaces_within_annotation_parentheses = false
 # No space after cast.
 ij_java_space_after_type_cast = false
+# Do not wrap singe-line javadoc comments.
 ij_java_doc_do_not_wrap_if_one_line = true
+# Don't use star imports.
+ij_java_class_count_to_use_import_on_demand = 999
+ij_java_names_count_to_use_import_on_demand = 999
 
 [*.json]
 indent_size = 2
@@ -71,6 +75,9 @@ ij_continuation_indent_size = 2
 indent_size = 2
 tab_width = 2
 ij_continuation_indent_size = 2
+# Don't use star imports.
+ij_kotlin_name_count_to_use_star_import = 999
+ij_kotlin_name_count_to_use_star_import_for_members = 999
 
 [{*.yml, *.yaml}]
 indent_size = 2
