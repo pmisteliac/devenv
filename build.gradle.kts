@@ -14,6 +14,7 @@ devenv {
 
   // Spoofax Core libraries and applications.
   registerRepo("mb-exec")
+  registerRepo("nabl")
   registerRepo("spoofax")
   registerRepo("sdf")
   registerRepo("jsglr")
