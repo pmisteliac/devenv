@@ -139,3 +139,16 @@ This plugin exposes the `devenv` extension which allows configuration of reposit
 
 ## Troubleshooting
 In general, ensure you're calling `./gradlew` on Linux and MacOS (or `gradlew.bat` on Windows) instead of your local Gradle installation. The local one is most likely too new.
+
+### Task 'buildAll' not found in root project 'devenv'
+You have 'configure on demand' enabled, such as `org.gradle.configureondemand=true` in your `~/.gradle/gradle.properties` file. Disable this.
+
+### Expiring Daemon because JVM heap space is exhausted
+You don't allow Gradle to use enough memory for the build. Create a `~/.gradle/gradle.properties` file and add the following:
+
+    org.gradle.jvmargs=-Xms512M -Xmx2G -Xss16M -Dfile.encoding=UTF-8
+
+This sets the initial heap size to 512 MiB, the maximum heap size to 2 GiB, and the stack size to 16 MiB.
+
+### Could not create service of type FileAccessTimeJournal using GradleUserHomeScopeServices.createFileAccessTimeJournal()
+The permissions in your `~/.gradle/` directory are too restrictive. For example, if you're using WSL, ensure the directory is not a symlink to the Windows' `.gradle/` directory.
