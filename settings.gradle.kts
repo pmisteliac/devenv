@@ -5,21 +5,17 @@ rootProject.name = "devenv"
 // Make plugin repositories available, for loading plugins in included builds.
 pluginManagement {
   repositories {
-    maven(url = "https://artifacts.metaborg.org/content/repositories/releases/")
-    maven(url = "https://artifacts.metaborg.org/content/repositories/snapshots/")
-    gradlePluginPortal()
+    maven("https://artifacts.metaborg.org/content/groups/public/")
   }
 }
 
 // Apply devenv-settings plugin. Settings plugins must still be put on the classpath via a buildscript block.
 buildscript {
   repositories {
-    maven(url = "https://artifacts.metaborg.org/content/repositories/releases/")
-    maven(url = "https://artifacts.metaborg.org/content/repositories/snapshots/")
-    gradlePluginPortal()
+    maven("https://artifacts.metaborg.org/content/groups/public/")
   }
   dependencies {
-    classpath("org.metaborg:gradle.config:0.3.15")
+    classpath("org.metaborg:gradle.config:0.3.19")
   }
 }
 apply(plugin = "org.metaborg.gradle.config.devenv-settings")
