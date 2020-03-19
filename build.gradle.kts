@@ -1,6 +1,6 @@
 plugins {
-  id("org.metaborg.gradle.config.devenv") version "0.3.19"
-  id("org.metaborg.gradle.config.root-project") version "0.3.19"
+  id("org.metaborg.gradle.config.devenv") version "0.3.20"
+  id("org.metaborg.gradle.config.root-project") version "0.3.20"
 }
 
 devenv {
@@ -24,6 +24,9 @@ devenv {
   registerRepo("resource")
   registerRepo("pie")
   registerRepo("spoofax-pie")
+
+  // Phil: Renaming + Tiger examples
+  registerRepo("metaborg-tiger", defaultUrl = "git@github.com:pmisteliac/metaborg-tiger.git", defaultBranch = "renaming")
 
   // Continuous integration.
   registerRepo("jenkins.pipeline")
