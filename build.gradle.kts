@@ -26,7 +26,7 @@ devenv {
   registerRepo("spoofax-pie")
 
   // Phil: Renaming + Tiger examples
-  registerRepo("metaborg-tiger", defaultUrl = "git@github.com:pmisteliac/metaborg-tiger.git", defaultBranch = "renaming")
+  registerRepo("metaborg-tiger")
 
   // Continuous integration.
   registerRepo("jenkins.pipeline")
