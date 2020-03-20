@@ -15,14 +15,13 @@ buildscript {
     maven("https://artifacts.metaborg.org/content/groups/public/")
   }
   dependencies {
-    classpath("org.metaborg:gradle.config:0.3.19")
+    classpath("org.metaborg:gradle.config:0.3.20")
   }
 }
 apply(plugin = "org.metaborg.gradle.config.devenv-settings")
 
 // Include builds from subdirectories, but only if it is from an included repository.
 configure<DevenvSettingsExtension> {
-  includeBuildsFromSubDirs(true)
   if(repoProperties["spoofax-pie"]?.include == true && rootDir.resolve("spoofax.pie").exists()) {
     // Manually include Spoofax-PIE (nested) composite builds, as IntelliJ does not support nested composite builds.
     includeBuild("spoofax.pie/core")
@@ -31,4 +30,5 @@ configure<DevenvSettingsExtension> {
     includeBuild("spoofax.pie/example/tiger/manual")
     includeBuild("spoofax.pie/example/mod")
   }
+  includeBuildsFromSubDirs(true)
 }
