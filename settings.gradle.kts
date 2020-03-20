@@ -29,6 +29,7 @@ configure<DevenvSettingsExtension> {
     includeBuild("spoofax.pie/example/tiger/generated")
     includeBuild("spoofax.pie/example/tiger/manual")
     includeBuild("spoofax.pie/example/mod")
+    includeBuild("spoofax.pie/example/sdf3")
   }
   includeBuildsFromSubDirs(true)
 }
