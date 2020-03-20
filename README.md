@@ -10,15 +10,26 @@ The script supports cloning and updating Git repositories that contain the sourc
 To run Gradle and build this repository, a Java Development Kit (JDK) of version 8 is needed.
 Higher versions of the JDK (9+) are currently not supported, as not all our Java code is compatible with Java 9+ yet.
 
-We recommend to [install JDK8 from AdoptOpenJDK](https://adoptopenjdk.net/), or your favourite package manager (e.g., `brew install adoptopenjdk8` on macOS).
+We recommend to [install JDK8 from AdoptOpenJDK](https://adoptopenjdk.net/), or to use your favourite package manager (e.g., `brew install adoptopenjdk8` on macOS, `choco install adoptopenjdk8jre` on Windows).
 
 ### Gradle
 
-Gradle does not need to be installed, as this repository includes a Gradle wrapper script which automatically downloads Gradle.
+#### Installing Gradle 5.6.4
 
-If you do not want to use the Gradle wrapper, Gradle version 5.6.4 (exactly) is needed.
-Gradle 6 is currently not supported, as not all our plugins are compatible with it yet.
-We recommend to install Gradle 5.6.4 using the [SDKMAN!](https://sdkman.io/) package manager with `sdk install gradle 5.6.4`.
+Gradle version 5.6.4 (exactly) is needed.
+However, to build on the command-line, Gradle does not need to be installed, as this repository includes a Gradle wrapper script (`gradlew`/`gradlew.bat`) which automatically downloads and runs Gradle 5.6.4.
+
+If you plan to import this project into IntelliJ, you do need to install Gradle 5.6.4.
+On macOS/Linux, we recommend installing Gradle 5.6.4 using the [SDKMAN!](https://sdkman.io/) package manager with `sdk install gradle 5.6.4`.
+On Windows, we recommend [Chocolatey](https://chocolatey.org/) with `choco install gradle --version=5.6.4`.
+
+#### Configuring Gradle's memory limits
+
+To configure Gradle's memory limits, modify (or create) the `~/.gradle/gradle.properties` file and add the following:
+
+```properties
+org.gradle.jvmargs=-Xmx2G -Xss16M
+```
 
 ## Updating repositories
 
@@ -53,10 +64,12 @@ to get an overview of which tasks can be executed. Interesting tasks will be in 
 
 
 ## Importing into IntelliJ IDEA
-[Import the project as a Gradle project](https://www.jetbrains.com/help/idea/gradle.html#gradle_import_project_start).
-In the wizard, choose _Use Gradle from_: _'wrapper' task in Gradle build script_, and ensure _Build and run using_ and _Run tests using_ are both set to _Gradle (default)_.
 
-> **Note**: If you do not want or can't use the wrapper, instead choose a local Gradle installation with `Specified location` (e.g., `/Users/gohla/.sdkman/candidates/gradle/5.6.4`).
+[Import the project as a Gradle project](https://www.jetbrains.com/help/idea/gradle.html#gradle_import_project_start).
+In the wizard, choose _Use Gradle from_: _'Specified location_, and choose the location where Gradle 5.6.4 is installed.
+With SDKMAN! this would be: `~/.sdkman/candidates/gradle/5.6.4`, and with Chocolatey: `C:/ProgramData/chocolatey/lib/gradle/tools/gradle-5.6.4`.
+Also ensure that _Build and run using_ and _Run tests using_ are both set to _Gradle (default)_.
+If the wizard does not show these settings, go to the [Gradle Settings](https://www.jetbrains.com/help/idea/gradle-settings.html) to configure these settings.
 
 When new repositories are cloned, [re-import a linked Gradle project﻿](https://www.jetbrains.com/help/idea/work-with-gradle-projects.html#gradle_refresh_project).
 
@@ -144,11 +157,7 @@ In general, ensure you're calling `./gradlew` on Linux and MacOS (or `gradlew.ba
 You have 'configure on demand' enabled, such as `org.gradle.configureondemand=true` in your `~/.gradle/gradle.properties` file. Disable this.
 
 ### Expiring Daemon because JVM heap space is exhausted
-You don't allow Gradle to use enough memory for the build. Create a `~/.gradle/gradle.properties` file and add the following:
-
-    org.gradle.jvmargs=-Xms512M -Xmx2G -Xss16M -Dfile.encoding=UTF-8
-
-This sets the initial heap size to 512 MiB, the maximum heap size to 2 GiB, and the stack size to 16 MiB.
+You didn't set the memory limits found at the start of this README, or they need to be increased even more.
 
 ### Could not create service of type FileAccessTimeJournal using GradleUserHomeScopeServices.createFileAccessTimeJournal()
 The permissions in your `~/.gradle/` directory are too restrictive. For example, if you're using WSL, ensure the directory is not a symlink to the Windows' `.gradle/` directory.
